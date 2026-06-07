@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="mental_health.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1077"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="covid_impact" custom_title="0" dock_id="1" table="4,12:maincovid_impact"/><dock_state state="000000ff00000000fd00000001000000020000000000000000fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000011800ffffff000000000000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">SELECT
+    year,
+    ami_pct,
+    smi_pct,
+    ami_millions
+FROM national_trend
+ORDER BY year;</sql><sql name="SQL 2*">SELECT
+    year,
+    ami_pct,
+    received_treatment_pct,
+    unmet_need_pct
+FROM treatment_gap
+ORDER BY year;</sql><sql name="SQL 3*">SELECT
+    age_group,
+    ami_pct,
+    smi_pct,
+    received_treatment_pct
+FROM demographics_age
+ORDER BY ami_pct DESC;</sql><sql name="SQL 4*">SELECT
+    race_ethnicity,
+    ami_pct,
+    smi_pct
+FROM demographics_race
+ORDER BY ami_pct DESC;</sql><sql name="SQL 5*">SELECT
+    sex,
+    ami_pct,
+    smi_pct,
+    received_treatment_pct
+FROM demographics_sex;</sql><sql name="SQL 6*">SELECT
+    year,
+    ami_pct,
+    depression_pct,
+    suicidal_ideation_pct,
+    received_treatment_pct
+FROM covid_impact
+ORDER BY year;</sql><current_tab id="5"/></tab_sql></sqlb_project>
